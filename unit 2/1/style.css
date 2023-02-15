@@ -1,3 +1,4 @@
-body {}
-
-#Nx {}
+#Nx {
+    position: relative;
+    left: 95%;
+}
