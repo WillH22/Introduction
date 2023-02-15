@@ -1,0 +1,24 @@
+body {
+    background-color: #d0cfcf;
+    font-size: 16px;
+}
+
+.par {
+    font-family: Roboto, 'Times New Roman', Times, serif;
+}
+
+.tag {
+    text-decoration: none;
+}
+
+#h2e {
+    text-transform: uppercase;
+}
+
+.sec {
+    font-size: 1.5em;
+}
+
+#h1e {
+    text-shadow: 5px 5px 2px red;
+}
