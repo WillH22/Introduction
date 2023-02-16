@@ -22,3 +22,13 @@ body {
 #h1e {
     text-shadow: 5px 5px 2px red;
 }
+
+.links {
+    position: relative;
+    left: 45%;
+}
+
+#Nx {
+    position: relative;
+    left: 93%
+}
