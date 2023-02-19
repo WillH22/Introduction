@@ -79,5 +79,11 @@ h5 {
 #kitty {
     font-size: 25px;
     font-weight: bold;
-    padding: 5px;
+    padding: 1px;
+}
+
+#sent {
+    border-top: 1px solid;
+    padding: 10px;
+    font-size: 15px;
 }
