@@ -8,17 +8,76 @@
     left: 1%;
 }
 
-h2 {
-    position: relative;
+#poof {
+    position: absolute;
     left: 41%;
+    top: 100px;
 }
 
 h5 {
-    position: relative;
+    position: absolute;
     left: 45%;
+    top: 135px;
+}
+
+#line {
+    margin: 100px;
 }
 
 .Ex {
     position: relative;
     left: 39%;
+    top: 75px;
+}
+
+#cmock {
+    position: absolute;
+    left: 1100px;
+    top: 250px;
+}
+
+#button {
+    border-radius: 5px;
+    font-size: 15px;
+    position: absolute;
+    top: 325px;
+    left: 1145px;
+    background-color: rgb(0, 204, 255);
+    color: white;
+    padding: 10px 20px;
+    display: block;
+}
+
+#button:focus {
+    outline: none;
+}
+
+#button:hover {
+    cursor: pointer;
+    background-color: rgb(0, 162, 255);
+}
+
+.cat {
+    width: 30%;
+    position: absolute;
+    top: 500px;
+    left: 825px;
+    border-radius: 10px;
+    border: 1px solid;
+    box-shadow: 0px 5px 5px 0px rgb(73, 70, 70);
+    background-color: rgb(189, 187, 187);
+}
+
+#image {
+    background-image: url("https://wl-brightside.cf.tsp.li/resize/728x/jpg/e54/e78/30a24451a8ba30d37a3dfa888c.jpg");
+    width: 100%;
+    border-radius: 10px;
+    height: 500px;
+    background-size: cover;
+}
+
+#kitty {
+    font-size: 25px;
+    font-weight: bold;
+    padding: 5px;
 }
