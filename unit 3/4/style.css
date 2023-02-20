@@ -87,3 +87,55 @@ h5 {
     padding: 10px;
     font-size: 15px;
 }
+
+#box {
+    display: flex;
+    justify-content: space-around;
+}
+
+.bx {
+    width: 250px;
+    height: 250px;
+    background-color: peachpuff;
+    position: relative;
+    top: 1000px;
+    border-radius: 20px;
+    border: 10px solid peachpuff;
+    overflow: hidden;
+}
+
+.ig {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.img1 {
+    background-image: url("https://hips.hearstapps.com/digitalspyuk.cdnds.net/16/21/1464344117-puppy1.gif");
+}
+
+.img2 {
+    background-image: url("https://i.pinimg.com/originals/14/84/68/1484683b239f8b92f60dbef530030167.gif");
+}
+
+.img3 {
+    background-image: url("https://assets.teenvogue.com/photos/577ec7712ebcfaec58489b14/master/w_320%2Cc_limit/11.gif");
+}
+
+.meme {
+    font-size: 3rem;
+    transition: top 0.6s;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 250px;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+}
+
+.bx:hover .meme {
+    top: 0;
+}
