@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<header>
+    <h1>Subunit 3</h1>
+    <nav>
+        <a href="../2/index.html">&lt; Prev</a>
+        <a href="../index.html">Unit 4</a>
+        <a href="../../index.html">Home</a>
+        <a href="../4/index.html">Next &gt;</a>
+    </nav>
+</header>
+<hr>
+
+<body>
+    <h3>Part I</h3>
+    <p>Write down what the following statements will return. Try to figure this out before putting the commands in the
+        chrome console.</p>
+    <ol>
+        <li>2 == "2";</li>
+        <p>true</p>
+
+        <li>2 === 2;</li>
+        <p>true</p>
+
+        <li>10 % 3;</li>
+        <p>1</p>
+
+        <li>10 % 3 === 1;</li>
+        <p>true</p>
+
+        <li>true && false;</li>
+        <p>false</p>
+
+        <li>false || true;</li>
+        <p>true</p>
+
+        <li>true || false;</li>
+        <p>true</p>
+    </ol>
+    <hr>
+    <h3>Part II</h3>
+    <p>Answer the following questions about this code block:</p>
+    <div>
+        <b>let</b> isLearning = true; <br>
+        <b>if</b> (isLearning) { <br>
+        console.log("keep it up!"); <br>
+        } <b>else</b> {
+        console.log("Pretty sure you are learning...?"); <br>
+        }
+    </div>
+
+    <ol>
+        <li>What should the above code console.log?</li>
+        <p>"Keep it up!</p>
+
+        <li>Why do we not need to specify <b>if(isLearning === true)</b>? Why does <b>if(isLearning)</b> work on its
+            own?</li>
+        <p>isLearning is alredy a true statement</p>
+    </ol>
+    <br>
+    <br>
+    <div>
+        <b>let</b> firstVariable; <br>
+        <b>let</b> secondVaraible = ""; <br>
+        <b>let</b> secretMessage = "Shhh!"; <br>
+        <br>
+        <b>if</b>(firstVaraible){ <br>
+        console.log("first"); <br>
+        } <b>else if</b>(firstVariable || secondVaraible){ <br>
+        console.log("second"); <br>
+        } <b>else if</b>(firstVaraible || thirdVaraible){ <br>
+        console.log("third"); <br>
+        } <b>else</b>{ <br>
+        console.log("fourth"); <br>
+        }
+    </div>
+    <br>
+    <ol>
+        <li>What should the above code console.log? <b>Why</b>?</li>
+        <p>It should console.log third since it is the only truthy statement</p>
+
+        <li>What is the value of <b>firstVariable</b> when it is initialized?</li>
+        <p>Undefined since it wasn't given a value</p>
+
+        <li>Is the value of firstVariable a "truthy" value? <b>Why</b>?</li>
+        <p>No, it is undefined which makes it falsey</p>
+
+        <li>Is the value of secondVaraible a "truthy" value? <b>Why</b>?</li>
+        <p>No, it's an empty string which makes it falsey</p>
+
+        <li>Is the value of thirdVaraible a "truthy" value? <b>Why</b>?</li>
+        <p>Yes because it's a number, all numbers are truthy.</p>
+    </ol>
+    <hr>
+    <h3>Part III</h3>
+    <ol>
+        <li>Write an if statement that console.log's "over 0.5" if <b>Math.random</b> returns a number greater than 0.5.
+            otherwise console.log "under 0.5.</li>
+        <br>
+        if(Math.random() > 0.5){ <br>
+        console.log("over 0.5"); <br>
+        } else {<br>
+        console.log("under 0.5"); <br>
+        }
+        <br>
+        <br>
+        <li>What is a falsey value? List all the falsey values in JavaScript.</li>
+        <p>a falsey value is considered false when in boolean context, some falsey values include an empty string, 0,
+            null, false, undefined, and NaN</p>
+    </ol>
+</body>
+
+</html>

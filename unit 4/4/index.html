@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<header>
+    <h1>Subunit 4</h1>
+    <nav>
+        <a href="../3/index.html">&lt; Prev</a>
+        <a href="../../index.html">Home</a>
+        <a href="../index.html">Unit 4</a>
+        <a href="../5/index.html">Next &gt;</a>
+    </nav>
+</header>
+
+<body>
+    <p><b>const</b> people = ["Greg", "Mary", "Devon", "James"];</p>
+    <ol>
+        <li>Write the command to remove "Greg" from the array</li>
+        <p>people.shift()</p>
+
+        <li>Write the command to remove "James from the array.</li>
+        <p>people.pop()</p>
+
+        <li>Write the command to add "Matt" to the front of the array.</li>
+        <p>people.unshift("Matt")</p>
+
+        <li>Write the command to add your name to the end of the array.</li>
+        <p>people.push("Will")</p>
+
+        <li>Write the command to make a copy of the array using <b>slice</b>. The copy should <b>NOT</b> include "Mary"
+            or "Matt".</li>
+        <p>people.slice(2)</p>
+
+        <li>Write the command that gives the indexOf where "Mary" is located.</li>
+        <p>people.indexOf("Mary")</p>
+
+        <li>Write the command that gives the indexOf where "Foo" is located (this should return -1).</li>
+        <p>people.indexOf("Foo")</p>
+
+        <li>Redefine the people variable with the value you started with. Using the <b>splice</b> command, remove
+            "Devon" from the array and add "Elizabeth" and "Artie". Your array should look like this when you are done
+            <b>["Greg", "Mary", "Elizabeth", "Artie", "James"]</b>.
+        </li>
+        <p>people.splice(2, 1, "Elizabeth", "Artie")</p>
+
+        <li>Create a new variable called withBob and set it equal to the <b>people</b> array concatenated with the
+            string of <b>"Bob"</b>.</li>
+        <p>let withBob = people.concat("Bob")</p>
+
+    </ol>
+    <script src="app.js"></script>
+</body>
+
+</html>
