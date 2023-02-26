@@ -60,9 +60,88 @@ return arr[arr.length-1] <br>
 
 <hr>
 
-<h4></h4>
+<h4>numberCompare</h4>
+<p>This function takes in two parameters (both numbers). If the first is greater than the second, this function returns "First is greater". If the second number is greater than the first, the function returns "Second is greater". Otherwise the function returns "Numbers are equal".</p>
+function numberCompare(x, y){ <br> 
+if(x &gt; y){ <br>
+return "First is greater" ;<br>
+} else if(x &lt; y){ <br>
+return "Second is greater"; <br>
+} else if(x === y){ <br>
+return "Numbers are equal" <br>
+} <br>
+} <br>
 
+<hr>
 
+<h4>singleLetterCount</h4>
+<p>This function takes in two parameters (two strings). The first parameter should be a word and the second should be a letter. The function returns the number of times that letter appears in the word. The function should be case insensitive (does not matter if the input is lowercase or uppercase). If the letter is not found in the word, the function should return 0.</p>
+function singleLetterCount(sent, l){ <br>
+    let count = 0; <br>
+    for(let i = 0; i &lt; sent.length; i++){ <br>
+        if(sent[i].toLowerCase === l.toLowerCase){ <br>
+            count++ <br>
+        } <br>
+    } <br>
+    return count <br>
+} <br>
+
+<hr>
+
+<h4>multipleLetterCount</h4>
+<p>This function takes in one parameter (a string) and returns an object with the keys being the letters and the values being the count of the letter.</p>
+
+function multipleLetterCount(strg) { <br>
+    strg = strg.toLowerCase(); <br>
+    let letters = {}; <br>
+    for (let i = 0; i &lt; strg.length; i++) { <br>
+      if (letters[strg[i]] === undefined) { <br>
+        letters[strg[i]] = 1; <br>
+      } else { <br>
+        letters[strg[i]]++; <br>
+      } <br>
+    } <br>
+    return letters; <br>
+  } <br>
+
+  <hr>
+
+  <h4>arrayManipulation</h4>
+  <p>This function should take in at most four parameters (an array, command, location, and value).</p>
+  <ul>
+    <li>If the command is "remove" and the location is "end", the function should remove the last value in the array and return the value removed. (In this case, the function only needs three arguments.)</li>
+    <li>If the command is "remove" and the location is "beginning"m the function should remove the first value in the array and return the value removed. (In this case, the function only needs three arguments.)</li>
+    <li>If the command is "add" and the location is "beginning", the function should add the value (fourth parameter) to the beginning of the array and return the array.</li>
+    <li>If the command is "add" and the location is "end", the function should add the value (fourth parameter) to the end of the array and return the array.</li>
+  </ul>
+
+  function arrayManipulation(arr, command, location, value) { <br>
+    if (command === "remove") { <br>
+      if (location === "end") { <br>
+        return arr.pop(); <br>
+      } else { <br>
+        return arr.shift(); <br>
+      } <br>
+    } <br>
+    if (command === "add") { <br>
+      if (location === "end") { <br>
+        arr.push(value); <br>
+        return arr; <br>
+      } else { <br>
+        arr.unshift(value); <br>
+        return arr; <br>
+      } <br>
+    } <br>
+  } <br>
+
+  <hr>
+
+  <h4>isPalindrome</h4>
+  <p>A palindrome is a word, phrase, number, or other sequence of characters which reads the same backward or forward. This function should take in one parameter and returns true or false if it is a palindrome. As a bonus, allow your function to ignore whitespace and capitalization so that isPalindrome('a man a plan a canal panama'); returns true</p>
+  
+  function isPalindrome(str) { <br>
+    return str.toLowerCase().split("").reverse().join("") === str.toLowerCase(); <br>
+  } <br>
 
 
 
