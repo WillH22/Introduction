@@ -1,0 +1,78 @@
+body {
+    background-color: rgb(211, 211, 211);
+}
+
+
+
+
+.onList {
+    width: 500px;
+    height: 750px;
+    background-color: rgb(170, 170, 170);
+    border: 2px solid black;
+    font-size: 2rem;
+    position: absolute;
+    left: 1500px;
+    top: 250px;
+}
+
+.addTodo {
+    width: 500px;
+    height: 750px;
+    background-color: rgb(170, 170, 170);
+    border: 2px solid black;
+    position: absolute;
+    top: 250px;
+    left: 500px;
+}
+
+#btn {
+    border-radius: 5px;
+    font-size: 20px;
+    padding: 10px 20px;
+    display: block;
+    position: relative;
+    top: 350px;
+    left: 185px;
+}
+
+#btn:hover{
+    cursor: pointer;
+}
+
+#textBox {
+    font-size: 25px;
+    position: relative;
+    top: 330px;
+    left: 75px;
+    text-align: center;
+}
+
+#todoTitle {
+    position: absolute;
+    top: 300px;
+    left: 1085px;
+    font-size: 150px;
+
+}
+
+#listTitle {
+    position: absolute;
+    top: 500px;
+    left: 1150px;
+    font-size: 150px;
+}
+
+#todoooo {
+    font-size: 50px;
+    font-weight: bolder;
+    position: relative;
+    left: 185px;
+    bottom: 50px;
+}
+
+.Bulleted {
+    position: relative;
+    bottom: 50px;
+}
+
