@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<header>
+    <h1>Subunit 2 Exercise</h1>
+    <a href="../index.html">Unit 8</a>
+    <a href="../../index.html">Home</a>
+    <a href="../4/index.html">Next &gt;</a>
+</header>
+<hr>
+
+<body>
+    <div class="header">
+    </div>
+    <section id="container">
+        <ul class="Ulist">
+            <li class="first">one</li>
+            <li class="second">two</li>
+            <li class="third">three</li>
+        </ul>
+        <ol class="Olist">
+            <li class="first">one</li>
+            <li class="second">two</li>
+            <li class="third">three</li>
+        </ol>
+    </section>
+    <div class="footer">
+    </div>
+
+    <p>Write the code necessary to do the following:</p>
+    <ol>
+        <li>Select the section with an id of container without using querySelector.</li>
+        <p>const conta = document.getElementById("container");</p>
+
+        <li>Select the section with an id of container using querySelector.</li>
+        <p>const cont = document.querySelector("#container");</p>
+
+        <li>Select all of the list item with a class of "second".</li>
+        <p>const lists = document.getElementsByClassName("second");</p>
+
+        <li>Select a list item with a class of third, but only the list item inside of the ol tag.</li>
+        <p>const oli = document.querySelector("ol .third");</p>
+
+        <li>Give the section with an id of container the text "Hello!"</li>
+        <p>cont.innertext = "Hello!"</p>
+
+        <li>Add the class main to the div with a class of footer.</li>
+        <p>const foot = document.querySelector(".footer");</p>
+        <p>foot.setAttribute('class', 'main')</p>
+
+        <li>Remove the class main on the div with a class of footer.</li>
+        <p>foot.setAttribute('class', "")</p>
+
+        <li>Create a new li element.</li>
+        <p>const newLi = document.createElement("li");</p>
+
+        <li>Give the li the text "four"</li>
+        <p>newLi.innerText = "four"</p>
+
+        <li>Appaend the li to the ul element.</li>
+        <p>const uli = document.querySelector('ul')</p>
+        <p>uli.append(newLi)</p>
+
+        <li>Loop over all of the lis inside the ol tag and give them a background color of "green"</li>
+        <p>const ollis = document.querySelectorAll(".Olist li");</p>
+        for (let olli of ollis) { <br>
+            olli.style.background = "red"; <br>
+          } <br>
+          <br>
+          
+        <li>Remove the div with a class of footer.</li>
+        <p>foot.remove()</p>
+
+
+    </ol>
+
+    <script src="app.js"></script>
+</body>
+</html>

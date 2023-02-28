@@ -8,42 +8,42 @@
     <title>Document</title>
 </head>
 <header>
-    Unit 7 Exercises
+    <h1>Unit 7 Exercises</h1>
+    <a href="../index.html">Home</a>
 </header>
+
+<hr>
+
 <body>
     <h4>countdown</h4>
     <p>Write a function called countdown that accepts a number as a parameter and every 1000 milliseconds decrements the value and console.logs it. Once the value is 0 it should log "Done!" and stop.</p>
-    function countDown(time){ <br>
-        let timer = setInterval(function(){ <br>
-          time--; <br>
-          if(time &lt;= 0){ <br>
-            clearInterval(timer); <br>
-            console.log('DONE!'); <br>
-          } <br>
-          else { <br>
-            console.log(time); <br>
-          } <br>
-      
-        },1000) <br>
-      } <br>
-<br>
+    function count(num) { <br>
+      let timer = setInterval(() => { <br>
+        num--; <br>
+        if (num &lt;= 0) { <br>
+          clearInterval(timer); <br>
+          console.log("done"); <br>
+        } else console.log(num); <br>
+      }, 1000); <br>
+    } <br>
 
 <hr>
 
 <h4>Random Game</h4>
 <p>Write a function called randomGame that selects a random number between 0 and 1 every 1000 milliseconds and each time that a random number is picked, add 1 to a counter. If the number is greater than .75, stop the timer and console.log the number of tries it took before we found a number greater than .75.</p>
-function randomGame(){ <br>
-    let num; <br>
-    let times = 0; <br>
-    let timer = setInterval(function(){ <br>
-      num = Math.random(); <br>
-      times++ <br>
-      if(num > .75) { <br>
-        clearInterval(timer); <br>
-        console.log("It took " + times + " try/tries."); <br>
-      } <br>
-    },1000) <br>
-  } <br>
+function randomGame() { <br>
+  let count = 0; <br>
+  let randnum; <br>
+  let timer = setInterval(() => { <br>
+    randnum = Math.random(); <br>
+    count++; <br>
+    console.log(randnum); <br>
+    if (randnum > 0.75) { <br>
+      clearInterval(timer); <br>
+      console.log(`It took ${count} tries to get above 0.75`); <br>
+    } <br>
+  }, 1000); <br>
+} <br>
 
 
     <script src="app.js"></script>
