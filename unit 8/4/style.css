@@ -76,3 +76,36 @@ body {
     bottom: 50px;
 }
 
+.crossed {
+text-decoration: line-through;
+}
+
+#purge{
+    border-radius: 5px;
+    font-size: 30px;
+    padding: 10px 20px;
+    display: block;
+    position: absolute;
+    right: 700px;
+    top: 475px;
+}
+
+#purge:hover{
+    cursor: pointer;
+    background-color: rgb(160, 6, 6);
+    transition: 3s;
+}
+
+#crossout{
+    border-radius: 5px;
+    font-size: 20px;
+    padding: 10px 20px;
+    display: block;
+    position: absolute;
+    top: 675px;
+    left: 185px;
+}
+
+#crossout:hover{
+    cursor: pointer;
+}
