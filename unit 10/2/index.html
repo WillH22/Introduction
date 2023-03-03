@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<header>
+    <h1>Git Basics Exercises</h1>
+    <nav>
+        <a href="../1/index.html">&lt; Prev</a>
+        <a href="../../index.html">Home</a>
+        <a href="../index.html">Unit 10</a>
+        <a href="../3/index.html">Next &gt;</a>
+    </nav>
+</header>
+
+<hr>
+
+<body>
+    <ol>
+        <li>Create a folder called <b><i>learn_git_again</i></b></li>
+        <p>rmdir learn_git_again</p>
+
+        <li><b><i>cd</i></b> into the <b><i>learn_git_again</i></b> folder</li>
+        <p>cd learn_git_again</p>
+
+        <li>Create a file called <b><i>third.txt</i></b></li>
+        <p>touch third.txt</p>
+
+        <li>Initialize an empty git repository</li>
+        <p>git init</p>
+
+        <li>Add <b><i>third.txt</i></b> to the staging area.</li>
+        <p>git add third.txt</p>
+
+        <li>Commit with the message "adding third.txt"</li>
+        <p>git commit -m "adding third.txt"</p>
+
+        <li>Check out your commit with <b><i>git log</i></b></li>
+        <p>git log</p>
+
+        <li>Create another file called <b><i>fourth.txt</i></b></li>
+        <p>touch fourth.txt</p>
+
+        <li>Add <b><i>fourth.txt</i></b> to the staging are</li>
+        <p>git add fourth.txt</p>        
+
+        <li>Commit with the message "adding fourth.txt"</li>
+        <p>git commit -m "adding fourth.txt"</p>
+
+        <li>Remove the <b><i>third.txt</i></b> file</li>
+        <p>rm third.txt</p>
+
+        <li>Add this change to the staging area</li>
+        <p>git rm third.txt</p>
+
+        <li>Commit with the message "removing third.txt"</li>
+        <p>git commit -m "removing third.txt"</p>
+
+        <li>Check out your commits using <b><i>git log</i></b></li>
+        <p>git log</p>
+
+        <li>Change your global setting <b><i>core.pager=cat</i></b> -you can read more about that <a href="https://git-scm.com/book/en/v2/Customizing-Git-Git-Configuration">[here]</a></li>
+        <p>git config --global core.pager"cat"</p>
+
+        <li>Write the command to list all of the global configurations for <b><i>git</i></b> on your machine. You can type <b><i>git config --global</i></b> to find out how to do this</li>
+        <p>git config -global -list</p>
+    </ol>
+
+
+    <script src="app.js"></script>
+</body>
+</html>

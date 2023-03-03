@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<header>
+    <h1>Terminal Exercises</h1>
+    <nav>
+        <a href="../../index.html">Home</a>
+        <a href="../index.html">Unit 10</a>
+        <a href="../2/index.html">Next &gt;</a>
+    </nav>
+</header>
+
+<hr>
+
+<body>
+    <h3>Part I</h3>
+    <ol>
+        <li>Make a directory called <b>first</b></li>
+        <p>mkdir first</p>
+
+        <li>Change directory to the <b>first</b> folder</li>
+        <p>cd first</p>
+
+        <li>Create a file called <b><i>person.txt</i></b></li>
+        <p>touch person.txt</p>
+
+        <li>Change the name of <b><i>person.txt</i></b> to <b><i>another.txt</i></b></li>
+        <p>mv person.txt another.txt</p>
+
+        <li>make a copy of the <b><i>another.txt</i></b> file and call it <b><i>copy.txt</i></b></li>
+        <p>cp another.txt copy.txt</p>
+
+        <li>remove the <b><i>copy.txt</i></b> file</li>
+        <p>rm copy.txt</p>
+
+        <li>make a copy of the <b>first</b> folder and call it <b>second</b></li>
+        <p>cp -r first second</p>
+
+        <li>delete the <b>second</b> folder</li>
+        <p>rmdir second or you could also do rm -rf second (incase it has any files inside)</p>
+    </ol>
+
+    <hr>
+
+    <h3>Part II</h3>
+    <ol>
+        <li>What does the <b>man</b> command do? type in <b><i>man rm</i></b>. How do you scroll and get out?</li>
+        <p>Man command lets you see a manual on the command you're using/want to use. You scroll using enter and can exit by pressing Q</p>
+
+        <li>Look at the <b>man</b> page for <b>ls</b>. What does the <b>-l</b> flag do? What does the <b>-a</b> flag do?</li>
+        <p>-l uses a long listing format, -a doesn't ignore entries starting with .</p>
+
+        <li>How do you jump between words in the terminal?</li>
+        <p>option/alt + left/right</p>
+
+        <li>How do you get to the end of a line in terminal?</li>
+        <p>Ctrl + e</p>
+
+        <li>How do you move your cursor to the beginning in the terminal?</li>
+        <p>Ctrl + a</p>
+
+        <li>How do you delete a word (without pressing backspace multiple times)  in terminal?</li>
+        <p>Ctrl + w</p>
+
+        <li>What is the difference between a terminal and shell?</li>
+        <p>Shell processes commands and returns output and a terminal runs a shell</p>
+
+        <li>What is an absolute path?</li>
+        <p>Its a specified path starting from the root directory</p>
+
+        <li>What is a relative path?</li>
+        <p>Its the path related to the pwd</p>
+
+        <li>What is a flag? Give three examples of flags you have used.</li>
+        <p>They change and enhance commands, some of the flags I've uses would be -b, -d, and -m</p>
+
+        <li>What do the <b>r</b> and <b>f</b> flags do with the <b>rm</b> command?</li>
+        <p>f attempts to remove the files without prompting for confirmation. r is equivalent to R which attempts to remove the file hierarchy rooted in each file argument.</p>
+    </ol>
+
+    <script src="app.js"></script>
+</body>
+</html>
