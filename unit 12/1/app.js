@@ -33,16 +33,34 @@ function addKeyAndValue(arr, key, value) {
 }
 
 function vowelCount(str) {
-  let lowstr = str.toLowerCase().split(" ");
+  let lowstr = str.toLowerCase().split("");
   const vowels = "aeiou";
   let count = {};
 
   lowstr.forEach(function (letter) {
-    if (vowels.indexOf(letter) !== undefined) {
-      count[lowstr] = 1;
-    } else {
-      count[lowstr]++;
+    if (vowels.indexOf(letter) !== -1) {
+      if (count[letter]) {
+        count[letter]++;
+      } else {
+        count[letter] = 1;
+      }
     }
   });
   return count;
+}
+
+function doublesValuesWithMap(arr) {
+  let doubled = [];
+  arr.map(function (num) {
+    doubled.push(num * 2);
+  });
+  return doubled;
+}
+
+function valTimesIndex(numbers) {
+  let Multi = [];
+  numbers.map(function (num, spot) {
+    Multi.push(num * spot);
+  });
+  return Multi;
 }

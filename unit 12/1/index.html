@@ -21,8 +21,8 @@
 <body>
     <h2>forEach</h2>
     <ul>
-        <h4>doubleValues</h4>
-        <li>Write a function called doubleValues which accepts an array and returns a new array with all the values in the array passed to the function doubled.</li>
+        <li><h4>doubleValues</h4></li>
+        <p>Write a function called doubleValues which accepts an array and returns a new array with all the values in the array passed to the function doubled.</p>
         <br>
         function doubleValues(arr) { <br>
             let doubled = []; <br>
@@ -32,8 +32,8 @@
             return doubled; <br>
           } <br>
 
-        <h4>onlyEvenValues</h4>
-        <li>Write a function called onlyEvenValues which accepts an array and returns a new array with only the even values in the array passed to the function.</li>
+        <li><h4>onlyEvenValues</h4></li>
+        <p>Write a function called onlyEvenValues which accepts an array and returns a new array with only the even values in the array passed to the function.</p>
         <br>
         function onlyEvens(arr) { <br>
             let evennum = []; <br>
@@ -45,8 +45,8 @@
             return evennum; <br>
           } <br>
 
-        <h4>showFirstAndLast</h4>
-        <li>Write a function called showFirstAndLast which accepts an array of strings and returns a new array with only the first and last character of each string.</li>
+        <li><h4>showFirstAndLast</h4></li>
+        <p>Write a function called showFirstAndLast which accepts an array of strings and returns a new array with only the first and last character of each string.</p>
         <br>
         function showFirstAndLast(arr) { <br>
             let firstAndLast = []; <br>
@@ -56,8 +56,8 @@
             return firstAndLast; <br>
           } <br>
 
-        <h4>addKeyAndValue</h4>
-        <li>Write a function called addKeyAndValue which accepts an array of objects, a key, and a value and returns the array passed to the function with the new key and value added for each object</li>
+        <li><h4>addKeyAndValue</h4></li>
+        <p>Write a function called addKeyAndValue which accepts an array of objects, a key, and a value and returns the array passed to the function with the new key and value added for each object</p>
         <br>
         function addKeyAndValue(arr, key, value) { <br>
             arr.forEach(function (newKV) { <br>
@@ -66,26 +66,58 @@
             return arr; <br>
           } <br>
 
-        <h4>vowelCount</h4>
-        <li>Write a function called vowelCount which accepts a string and returns an object with the keys as the vowel and the values as the number of times the vowel appears in the string. This function should be case insensitive so a lowercase letter and uppercase letter should count.</li>
-
+        <li><h4>vowelCount</h4></li>
+        <p>Write a function called vowelCount which accepts a string and returns an object with the keys as the vowel and the values as the number of times the vowel appears in the string. This function should be case insensitive so a lowercase letter and uppercase letter should count.</p>
+       <br>
+        function vowelCount(str) { <br>
+          let lowstr = str.toLowerCase().split(""); <br>
+          const vowels = "aeiou"; <br>
+          let count = {}; <br>
+         <br>
+          lowstr.forEach(function (letter) { <br>
+            if (vowels.indexOf(letter) !== -1) { <br>
+              if (count[letter]) { <br>
+                count[letter]++; <br>
+              } else { <br>
+                count[letter] = 1; <br>
+              } <br>
+            } <br>
+          }); <br>
+          return count; <br>
+        } <br>
     </ul>
 
     <hr>
 
     <h2>map</h2>
     <ul>
-        <h4>doubleValuesWithMap</h4>
-        <li>Write a function called doubleValuesWithMap which accepts an array and returns a new array with all the values in the array passed to the function doubled</li>
+        <li><h4>doubleValuesWithMap</h4></li>
+        <p>Write a function called doubleValuesWithMap which accepts an array and returns a new array with all the values in the array passed to the function doubled</p>
+<br>
+function doublesValuesWithMap(arr) { <br>
+  let doubled = []; <br>
+  arr.map(function (num) { <br>
+    doubled.push(num * 2); <br>
+  }); <br>
+  return doubled; <br>
+} <br>
+<br>
+        <li><h4>valTimesIndex</h4></li>
+        <p>Write a function called valTimesIndex which accepts an array and returns a new array with each value multiplied by the index it is currently at in the array.</p>
+        <br>
+function valTimesIndex(numbers) { <br>
+  let Multi = []; <br>
+  numbers.map(function (num, spot) { <br>
+    Multi.push(num * spot); <br>
+  }); <br>
+  return Multi; <br>
+} <br>
+<br>
+        <li><h4>extractKey</h4></li>
+        <p>Write a function called extractKey which accepts an array of objects and some key and returns a new array with the value of that key in each object</p>
 
-        <h4>valTimesIndex</h4>
-        <li>Write a function called valTimesIndex which accepts an array and returns a new array with each value multiplied by the index it is currently at in the array.</li>
-
-        <h4>extractKey</h4>
-        <li>Write a function called extractKey which accepts an array of objects and some key and returns a new array with the value of that key in each object</li>
-
-        <h4>extractFullName</h4>
-        <li>Write a function called extractFullName which accepts an array of objects and returns a new array with the value of the key with a name of "first" and the value of a key with the name of "last" in each object, concatenated together with a space.</li>
+        <li><h4>extractFullName</h4></li>
+        <p>Write a function called extractFullName which accepts an array of objects and returns a new array with the value of the key with a name of "first" and the value of a key with the name of "last" in each object, concatenated together with a space.</p>
     
     </ul>
 
@@ -93,20 +125,20 @@
 
     <h2>filter</h2>
     <ul>
-        <h4>filterByValue</h4>
-        <li>Write a function called filterByValue which accepts an array of objects and a key and returns a new array with all the objects that contain that key.</li>
+        <li><h4>filterByValue</h4></li>
+        <p>Write a function called filterByValue which accepts an array of objects and a key and returns a new array with all the objects that contain that key.</p>
         
-        <h4>find</h4>
-        <li>Write a function called find which accepts an array and a value and returns the first element in the array that has the same value as the second parameter or undefined if the value is not found in the array.</li>
+        <li><h4>find</h4></li>
+        <p>Write a function called find which accepts an array and a value and returns the first element in the array that has the same value as the second parameter or undefined if the value is not found in the array.</p>
 
-        <h4>findInObj</h4>
-        <li>Write a function called findInObj which accepts an array of objects, a key, and some value to search for and returns the first found value in the array.</li>
+        <li><h4>findInObj</h4></li>
+        <p>Write a function called findInObj which accepts an array of objects, a key, and some value to search for and returns the first found value in the array.</p>
 
-        <h4>removeVowels</h4>
-        <li>Write a function called removeVowels which accepts a string and returns a new string with all of the vowels (both uppercased and lowercased) remove. Every character in the new string should be lowercased.</li>
+        <li><h4>removeVowels</h4></li>
+        <p>Write a function called removeVowels which accepts a string and returns a new string with all of the vowels (both uppercased and lowercased) remove. Every character in the new string should be lowercased.</p>
 
-        <h4>doubleOddNumbers</h4>
-        <li>Write a function called doubleOddNumbers which accepts an array and returns a new array with all of the odd numbers doubled (HINT - you can use map and filter to double and then filter the odd numbers).</li>
+        <li><h4>doubleOddNumbers</h4></li>
+        <p>Write a function called doubleOddNumbers which accepts an array and returns a new array with all of the odd numbers doubled (HINT - you can use map and filter to double and then filter the odd numbers).</p>
     </ul>
 
     <script src="app.js"></script>
