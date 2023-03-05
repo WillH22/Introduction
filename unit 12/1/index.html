@@ -115,10 +115,26 @@ function valTimesIndex(numbers) { <br>
 <br>
         <li><h4>extractKey</h4></li>
         <p>Write a function called extractKey which accepts an array of objects and some key and returns a new array with the value of that key in each object</p>
-
+        <br>
+        function extractKey(arr, key) { <br>
+          let obj = []; <br>
+          arr.map(function (obbi) { <br>
+            obj.push(obbi[key]); <br>
+          }); <br>
+          return obj; <br>
+        } <br>
+        <br>
         <li><h4>extractFullName</h4></li>
         <p>Write a function called extractFullName which accepts an array of objects and returns a new array with the value of the key with a name of "first" and the value of a key with the name of "last" in each object, concatenated together with a space.</p>
-    
+        <br>
+        function extractFullName(arr) { <br>
+          let FullName = []; <br>
+          arr.map(function (name) { <br>
+            FullName.push(`${name.first} ${name.last}`); <br>
+          }); <br>
+          return FullName; <br>
+        } <br>
+
     </ul>
 
     <hr>
@@ -127,19 +143,60 @@ function valTimesIndex(numbers) { <br>
     <ul>
         <li><h4>filterByValue</h4></li>
         <p>Write a function called filterByValue which accepts an array of objects and a key and returns a new array with all the objects that contain that key.</p>
-        
+        <br>
+        function filterByValue(arr, key) { <br>
+          let newarr = arr.filter(function (words) { <br>
+            return words[key] !== -1; <br>
+          }); <br>
+          return newarr; <br>
+        } <br>
+        <br>
         <li><h4>find</h4></li>
         <p>Write a function called find which accepts an array and a value and returns the first element in the array that has the same value as the second parameter or undefined if the value is not found in the array.</p>
-
+        <br>
+        function find(arr, searchValue) { <br>
+          let value = arr.filter(function (val) { <br>
+            return val === searchValue; <br>
+          })[0]; <br>
+          return value; <br>
+        } <br>
+        <br>
         <li><h4>findInObj</h4></li>
         <p>Write a function called findInObj which accepts an array of objects, a key, and some value to search for and returns the first found value in the array.</p>
-
+        <br>
+        function findInObj(arr, key, searchValue) { <br>
+          let answer = arr.filter(function (val) { <br>
+            return val[key] === searchValue; <br>
+          })[0]; <br>
+          return answer; <br>
+        } <br>
+        <br>
         <li><h4>removeVowels</h4></li>
         <p>Write a function called removeVowels which accepts a string and returns a new string with all of the vowels (both uppercased and lowercased) remove. Every character in the new string should be lowercased.</p>
-
+        <br>
+        function removeVowels(str) { <br>
+          const vowels = "aeiou"; <br>
+          let lowstr = str.toLowerCase().split(""); <br>
+          let vowelsRemoved = lowstr.filter(function (letters) { <br>
+            return vowels.indexOf(letters) === -1; <br>
+          }); <br>
+          return vowelsRemoved; <br>
+        } <br>
+        <br>
         <li><h4>doubleOddNumbers</h4></li>
         <p>Write a function called doubleOddNumbers which accepts an array and returns a new array with all of the odd numbers doubled (HINT - you can use map and filter to double and then filter the odd numbers).</p>
-    </ul>
+        <br>
+        function doubleOddNumbers(arr) { <br>
+          let odds = arr.filter(function (num) { <br>
+            return num % 2 !== 0; <br>
+          }); <br>
+          let doubled = odds.map(function (numdoubled) { <br>
+            return numdoubled * 2; <br>
+          }); <br>
+          return doubled; <br>
+        } <br>
+        <br>
+      </ul>
 
     <script src="app.js"></script>
 </body>
