@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<header>
+    <h1>Subunit 12.2 Exercises</h1>
+    <nav>
+        <a href="../1/index.html">&lt; Prev</a>
+        <a href="../../index.html">Home</a>
+        <a href="../index.html">Unit 12</a>
+        <a href="../3/index.html">Next &gt;</a>
+    </nav>
+</header>
+
+<hr>
+
+<body>
+    <h1>Some Every Exercises</h1>
+    <ul>
+        <li><h4>hasOddNumber</h4></li>
+        <p>Write a function called hasOddNumber which accepts an array and returns true if the array contains at least one odd number, otherwise it returns false.</p>\
+        <br>
+        function hasOddNumber(arr) { <br>
+            let odd = arr.some(function (num) { <br>
+              return num % 2 !== 0; <br>
+            }); <br>
+            return odd; <br>
+          } <br>
+          <br>
+        <li><h4>hasAZero</h4></li>
+        <p>Write a function called hasAZero which accepts a number and a returns true if that number contains at least one zero. Otherwise, the function should return false</p>
+        <br>
+        function hasAZero(num) { <br>
+            let numstr = num.toString().split(""); <br>
+            let zero = numstr.some(function (number) { <br>
+              return number === "0"; <br>
+            }); <br>
+            return zero; <br>
+          } <br>
+          <br>
+        <li><h4>hasOnlyOddNumbers</h4></li>
+        <p>Write a function called hasOnlyOddNumbers which accepts an array and returns true if every single number in the array is odd. If any of the values in the array are no odd, the function should return false.</p>
+        <br>
+        function hasOnlyOddNumbers(arr) { <br>
+            let odd = arr.every(function (number) { <br>
+              return number % 2 === 1; <br>
+            }); <br>
+            return odd; <br>
+          } <br>
+          <br>
+
+        <li><h4>hasNoDuplicates</h4></li>
+        <p>Write a function called hasNoDuplicates which accepts an array and returns true if there are no duplicate values (more than one element in the array that has the same values as another). If there are any duplicates, the function should return false.</p>
+        <br>
+        function hasNoDuplicates(arr) { <br>
+            let noDupe = arr.every(function (dupe) { <br>
+              return arr.indexOf(dupe) === arr.lastIndexOf(dupe); <br>
+            }); <br>
+            return noDupe; <br>
+          } <br>
+          <br>
+        <li><h4>hasCertainKey</h4></li>
+        <p>Write a function called hasCertainKey which accepts an array of objects and a key, and returns true if every single object in the array contains that key. Otherwise it should return false</p>
+        <br>
+        function hasCertainKey(arr, key) { <br>
+            let Certain = arr.every(function (spot) { <br>
+              return key in spot; <br>
+            }); <br>
+            return Certain; <br>
+          } <br>
+          <br>
+        <li><h4>hasCertainValue</h4></li>
+        <p>Write a function called hasCertainValue which accepts an array of objects and a key, and a value, and returns true if every single object in the array contains that value for the specific key. Otherwise it should return false.</p>
+        <br>
+        function hasCertainValue(arr, key, searchValue) { <br>
+            let certVal = arr.every(function (spot) { <br>
+              return spot[key] === searchValue; <br>
+            }); <br>
+            return certVal; <br>
+          } <br>
+    </ul>
+    <br>
+
+    <hr>
+<h1>Find / Findindex</h1>
+
+<ul>
+    <li><h4>findUserByUsername</h4></li>
+    <p>Write a function called findUserByUsername which accepts an array of objects, each with a key of username, and a string. The function should return the first object with the key of username that matches the string passed to the function. If the object is not found, return undefined.</p>
+
+    <li><h4>removeUser</h4></li>
+    <p>Write a function called removeUser which accepts an array of objects each with a key of username, and a string. The function should remove the object from the array and return this object. If the object is not found, return undefined.</p>
+</ul>
+    
+
+    <script src="app.js"></script>
+</body>
+</html>
