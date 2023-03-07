@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<header>
+    <h1>Arrow Functions Exercise</h1>
+    <nav>
+    <a href="../2/index.html">&lt; Prev</a>
+    <a href="../../index.html">Home</a>
+    <a href="../index.html">Unit 14</a>
+    <a href="../4/index.html">Next &gt;</a>
+    </nav>
+</header>
+
+<hr>
+
+<body>
+    <p>In this exercise, you'll refactor some ES5 code into ES2015</p>
+
+    <h3>ES5 Map Callback</h3>
+    <div>
+        function double(arr){ <br>
+            return arr.map(function(val){ <br>
+                return val * 2 <br>
+            }) <br>
+        } <br>
+    </div>
+
+    <h3>ES2015 Arrow Functions Shorthand</h3>
+    <p>Refactor the above code to use two arrow functions. Turn it into a one liner.</p>
+    <h4>my code</h4>
+    <div>const double = (arr) =&gt; arr.map((val) =&gt; val * 2);</div>
+
+    <hr>
+
+    <h3>Refactor the following function to use arrow functions:</h3>
+    <p>replace ALL functions with arrow functions</p>
+    <br>
+    function squareAndFindEvens(numbers){ <br>
+        var squares = numbers.map(function(num){ <br>
+          return num ** 2; <br>
+        }); <br>
+        var evens = squares.filter(function(square){ <br>
+          return square % 2 === 0; <br>
+        }); <br>
+        return evens; <br>
+      } <br>
+      <br>
+
+      <h4>my code</h4>
+      const squareAndFindEvens = (numbers) =&gt;
+  numbers.map((num) =&gt; num ** 2).filter((square) =&gt; square % 2 === 0);
+
+
+
+
+    <script src="app.js"></script>
+</body>
+</html>
