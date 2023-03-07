@@ -1,3 +1,5 @@
+//Some/Every Exercises
+
 function hasOddNumber(arr) {
   let odd = arr.some(function (num) {
     return num % 2 !== 0;
@@ -41,9 +43,19 @@ function hasCertainValue(arr, key, searchValue) {
   return certVal;
 }
 
-let arr = [
-  { title: "Instructor", first: "Elie", last: "Schoppik" },
-  { title: "Instructor", first: "Tim", last: "Garcia", isCatOwner: true },
-  { title: "Instructor", first: "Matt", last: "Lane" },
-  { title: "Instructor", first: "Colt", last: "Steele", isCatOwner: true },
-];
+//Find/Findindex Exercises
+
+function findUserByUsername(usersArray, username) {
+  let found = usersArray.find(function (user) {
+    return user.username === username;
+  });
+  return found;
+}
+
+function removeUser(usersArray, username) {
+  let removed = usersArray.findIndex(function (user) {
+    return user.username === username;
+  });
+  if (removed === -1) return;
+  return usersArray.splice(removed, 1);
+}

@@ -92,10 +92,26 @@
 <ul>
     <li><h4>findUserByUsername</h4></li>
     <p>Write a function called findUserByUsername which accepts an array of objects, each with a key of username, and a string. The function should return the first object with the key of username that matches the string passed to the function. If the object is not found, return undefined.</p>
-
+    <br>
+    function findUserByUsername(usersArray, username) { <br>
+      let found = usersArray.find(function (user) { <br>
+        return user.username === username; <br>
+      }); <br>
+      return found; <br>
+    } <br>
+    <br>
     <li><h4>removeUser</h4></li>
     <p>Write a function called removeUser which accepts an array of objects each with a key of username, and a string. The function should remove the object from the array and return this object. If the object is not found, return undefined.</p>
-</ul>
+    <br>
+    function removeUser(usersArray, username) { <br>
+      let removed = usersArray.findIndex(function (user) { <br>
+        return user.username === username; <br>
+      }); <br>
+      if (removed === -1) return; <br>
+      return usersArray.splice(removed, 1); <br>
+    } <br>
+
+  </ul>
     
 
     <script src="app.js"></script>
