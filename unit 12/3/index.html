@@ -22,16 +22,62 @@
 <ul>
     <li><h3>extractValue</h3></li>
     <p>Write a function called extractValue which accepts an array of objects and a key and returns a new array with the value of each object at the key.</p>
+    <br>
+    function extractValue(arr, key) { <br>
+        let reduced = arr.reduce(function (obj, val) { <br>
+          obj.push(val[key]); <br>
+          return obj; <br>
+        }, []); <br>
+        return reduced; <br>
+      } <br>
+      <br>
 
     <li><h3>vowelCount</h3></li>
     <p>Write a function called vowelCount which accepts a string and returns an object with the keys as the vowel and the values as the number of times the vowel appears in the string. This function should be case insensitive so a lowercase letter and uppercase letter should count.</p>
-
+    <br>
+    function vowelCount(str) {
+        let lowstr = str.toLowerCase().split(""); <br>
+        const vowels = "aeiou"; <br>
+        let reduced = lowstr.reduce(function (letter, nextLetter) { <br>
+          if (vowels.indexOf(nextLetter) !== -1) { <br>
+            if (letter[nextLetter]) { <br>
+              letter[nextLetter]++; <br>
+            } else { <br>
+              letter[nextLetter] = 1; <br>
+            } <br>
+          } <br>
+          return letter; <br>
+        }, {}); <br>
+        return reduced; <br>
+      } <br>
+      <br>
     <li><h3>addKeyAndValue</h3></li>
     <p>Write a function called addKeyAndValue which accepts an array of objects and returns the array of objects passed to it with each object now including the key and value passed to the function</p>
-
+    <br>
+    function addKeyAndValue(arr, key, value) { <br>
+        let newarr = arr.reduce(function (title, word, spot) { <br>
+          title[spot][key] = value; <br>
+          return title; <br>
+        }, arr); <br>
+        return newarr; <br>
+      } <br>
+      <br>
     <li><h3>partition</h3></li>
     <p>Write a function called partition which accepts an array and a callback and returns an array with two arrays inside of it. The partition function should run the callback function on each value in the array and if the result of the callback function at that specific value is true, the value should be placed in the first subarray. If the result of the callback function at that specific value is false, the value should be placed in the second subarray.</p>
-    
+    <br>
+    function partition(arr, callback) { <br>
+        return arr.reduce( <br>
+          function (first, next) { <br>
+            if (callback(next)) { <br>
+              first[0].push(next); <br>
+            } else { <br>
+              first[1].push(next); <br>
+            } <br>
+            return first; <br>
+          }, <br>
+          [[], []] <br>
+        ); <br>
+      } <br>
 </ul>
 
 
