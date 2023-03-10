@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<header>
+    <h1>Rest/Spread Operator Exercise</h1>
+    <a href="../3/index.html">&lt; Prev</a>
+    <a href="../../index.html">Home</a>
+    <a href="../index.html">Unit 14</a>
+    <a href="../5/index.html">Next &gt;</a>
+</header>
+
+<hr>
+
+<body>
+<h3>Given this function:</h3>
+<br>
+function filterOutOdds() { <br>
+    var nums = Array.prototype.slice.call(arguments); <br>
+    return nums.filter(function(num) { <br>
+      return num % 2 === 0 <br>
+    }); <br>
+  } <br>
+    
+  <h3>Refactor it to use the rest operator & an arrow function:</h3>
+  <br>
+  <div>const filterOutOdds = (...nums) =&gt; nums.filter((num) =&gt; num % 2 == 0);</div>
+  <br>
+
+  <h3>findMin</h3>
+  <p>Write a function called findMin that accepts a variable number of arguments and returns the smallest argument. Make sure to do this useing the rest and spread operator</p>
+  <br>
+  const findMin = (...nums) =&gt; Math.min(...nums);
+  <br>
+  <h3>mergeObjects</h3>
+  <p>Write a function called mergeObjects that accepts two objects and returns a new object which contains all the keys and values of hte first object and second object</p>
+  <br>
+  const mergeObject = (object, obj) =&gt; ({ ...object, ...obj });
+  <br>
+  <h3>doubleAndReturnArgs</h3>
+  <p>Write a function called doubleAndReturnArgs which accepts an array and a variable number of arguments. The function should return a new array with the original array values and all of additional arguments doubled.</p>
+  <br>
+  const doubleAndReturnArgs = (arr, ...nums) =&gt; [ 
+  ...arr, 
+  ...nums.map((num) =&gt; num * 2), 
+]; 
+<br>
+  <h3>Slice and Dice!</h3>
+  <p>For this section, write the following functions using rest, spread and refactor these functions to be arrow functions! Make sure that you are always returning a new array or object and not modifying the existing inputs.</p>
+
+
+
+    <script src="app.js"></script>
+</body>
+</html>
