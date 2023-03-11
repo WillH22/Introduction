@@ -15,3 +15,28 @@ const doubleAndReturnArgs = (arr, ...nums) => [
 ];
 
 const mergeObject = (object, obj) => ({ ...object, ...obj });
+
+const removeRandom = (items) => {
+  let idx = Math.floor(Math.random() * items.length);
+  return [...items.slice(0, idx), ...items.slice(idx + 1)];
+};
+
+const extend = (array1, array2) => [...array1, ...array2];
+
+const addKeyVal = (obj, key, val) => {
+  let newobj = {};
+  newobj[key] = val;
+  return { ...obj, ...newobj };
+};
+
+const removeKey = (obj, key) => {
+  delete obj[key];
+  return obj;
+};
+
+const combine = (obj1, obj2) => ({ ...obj1, ...obj2 });
+
+const update = (obj, key, val) => {
+  obj[key] = val;
+  return { ...obj };
+};

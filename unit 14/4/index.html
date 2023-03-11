@@ -52,7 +52,45 @@ function filterOutOdds() { <br>
 <br>
   <h3>Slice and Dice!</h3>
   <p>For this section, write the following functions using rest, spread and refactor these functions to be arrow functions! Make sure that you are always returning a new array or object and not modifying the existing inputs.</p>
+  <ul>
+    <li><h5>function removeRandom(items){}</h5></li>
+    <br>
+    const removeRandom = (items) =&gt; { <br>
+        let idx = Math.floor(Math.random() * items.length); <br>
+        return [...items.slice(0, idx), ...items.slice(idx + 1)]; <br>
+      }; <br>
+      <br>
+    <li><h5>function extend(array1, array2){}</h5></li>
+    <p>const extend = (array1, array2) =&gt; [...array1, ...array2];</p>
 
+    <li><h5>function addKeyVal(obj, key){}</h5></li>
+    <br>
+    const addKeyVal = (obj, key, val) =&gt; { <br>
+        let newobj = {}; <br>
+        newobj[key] = val; <br>
+        return { ...obj, ...newobj }; <br>
+      }; <br>
+      <br>
+
+      <li><h5>removeKey(obj, key){}</h5></li>
+      <br>
+      const removeKey = (obj, key) =&gt; { <br>
+        delete obj[key]; <br>
+        return obj; <br>
+      }; <br>
+      <br>
+
+    <li><h5>function combine(obj1, obj2){}</h5></li>
+    <p>const combine = (obj1, obj2) =&gt; ({ ...obj1, ...obj2 });</p>
+
+    <li><h5>function update(obj, key, val){}</h5></li>
+    <br>
+    const update = (obj, key, val) =&gt; { <br>
+        obj[key] = val; <br>
+        return { ...obj }; <br>
+      }; <br>
+      <br>
+  </ul>
 
 
     <script src="app.js"></script>
