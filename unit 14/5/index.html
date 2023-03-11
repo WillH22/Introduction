@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<header>
+    <h1>Object Enhancements Exercise</h1>
+    <a href="../4/index.html">&lt; Prev</a>
+    <a href="../../index.html">Home</a>
+    <a href="../index.html">Unit 14</a>
+    <a href="../6/index.html">Next &gt;</a>
+</header>
+
+<hr>
+
+<body>
+<p>In this exercise, you'll refactor some ES5 code into ES2015. Write your code int he sections with a comment to "Write an ES2015 Version"</p>
+
+    <ul>
+        <li><h3>Same keys and values</h3></li>
+        <br>
+        function createInstructor(firstName, lastName){ <br>
+            return { <br>
+              firstName: firstName, <br>
+              lastName: lastName <br>
+            } <br>
+          } <br>
+          <br>
+          <h3>Same keys and values ES2015</h3>
+          <p>const createInstructor = (firstName, lastName) => ({ firstName, lastName });</p>
+
+          <li><h3>Computed Property Names</h3></li>
+          <br>
+          var favoriteNumber = 42; <br>
+
+var instructor = { <br>
+  firstName: "Colt" <br>
+} <br>
+<br>
+instructor[favoriteNumber] = "That is my favorite!" <br>
+<br>
+
+<h3>Computed Property Names ES2015</h3>
+<br>
+let favoriteNumber = 42; <br>
+ <br>
+const instructor = { <br>
+  firstName: "Colt", <br>
+  [favoriteNumber]: "that is my favorite!", <br>
+}; <br>
+<br>
+
+<li><h3>Object Methods</h3></li>
+<br>
+var instructor = { <br>
+    firstName: "Colt", <br>
+    sayHi: function(){ <br>
+      return "Hi!"; <br>
+    }, <br>
+    sayBye: function(){ <br>
+      return this.firstName + " says bye!"; <br>
+    } <br>
+  } <br>
+  <br>
+
+  <h3>Object Methods ES2015</h3>
+  <br>
+  const instr = { <br>
+    firstName: "Colt", <br>
+    sayHi() { <br>
+      return "Hi!"; <br>
+    }, <br>
+    sayBye() { <br>
+      return `${this.firstName} says bye!`; <br>
+    }, <br>
+  }; <br>
+   <br>
+
+  <li><h3>createAnimal function</h3></li>
+  <p>Write a function which generates an animal object. The function should accept 3 arguments</p>
+  <ul>
+    <li>Species: The species of animal ('cat', 'dog')</li>
+    <li>verb: a string used to name a function ('bark', 'bleet')</li>
+    <li>noise: a string to be printed when above function is called ('woof', 'baa')</li>
+    </ul>
+    <p>Use one or more of the object enhancements we've covered</p>
+    <br>
+    const createAnimal = (species, verb, noise) => ({ <br>
+        species, <br>
+        [verb]() { <br>
+          return noise; <br>
+        }, <br>
+      }); <br>
+
+        
+    </ul>
+
+
+
+    <script src="app.js"></script>
+</body>
+</html>
