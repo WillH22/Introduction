@@ -17,7 +17,51 @@
 <hr>
 
 <body>
-    
+    <ul>
+        <li><h3>Quick Question #1</h3></li>
+        <p>What does the following code return?</p>
+        <div>new Set([1,1,2,2,3,4])</div>
+
+        <p>returns: Set(4) {1, 2, 3, 4}</p>
+
+        <li><h3>Quick Question #2</h3></li>
+        <p>What does the following code return?</p>
+        <div>[...new Set("referee")].join("")</div>
+        <p>returns : 'ref'</p>
+
+        <li><h3>Quick Questions #3</h3></li>
+        <p>What does the Map <b><i>m</i></b> look like after running the following code?</p>
+        <div>
+            let m = new Map(); <br>
+m.set([1,2,3], true); <br>
+m.set([1,2,3], false); <br>
+        </div>
+        <p>returns: map(2) {Array(3) => true, Array(3) => false}</p>
+
+        <li><h3>hasDuplicate</h3></li>
+        <p>Write a function called hasDuplicate which accepts an array and returns true or false if that array contains a duplicate</p>
+        <p>const hasDuplicate = (arr) => new Set(arr).size !== arr.length;</p>
+
+        <li><h3>vowelCount</h3></li>
+        <p>Write a function called vowelCount which accepts a string and returns a map where the keys are numbers and the values are the count of the vowels in the string.</p>
+        <br>
+        const vowelCount = (str) => { <br>
+            let lowstr = str.toLowerCase(); <br>
+            let vowels = "aeiou"; <br>
+            const vowelMap = new Map(); <br>
+           <br>
+            for (let letters of lowstr) { <br>
+              if (vowels.includes(letters)) { <br>
+                if (vowelMap.has(letters)) { <br>
+                  vowelMap.set(letters, vowelMap.get(letters) + 1); <br>
+                } else { <br>
+                  vowelMap.set(letters, 1); <br>
+                } <br>
+              } <br>
+            } <br>
+            return vowelMap; <br>
+          }; <br>
+    </ul>
 
 
 
