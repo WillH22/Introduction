@@ -9,4 +9,4 @@ def weekday_name(day_of_week):
     days = ['Sunday', 'Monday', 'Tuesday',
             'Wednesday', 'Thursday', 'Friday', 'Saturday']
 
-    return days.index(day_of_week)
+    return days[day_of_week - 1]
