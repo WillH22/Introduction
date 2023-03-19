@@ -144,3 +144,120 @@ def compact(lst):
         if bool(stuff) == True:
             newlst.append(stuff)
     return newlst
+
+
+"""This function takes a list and returns a new list of items that are True and not Falsey"""
+
+
+def intersection(l1, l2):
+    l3 = []
+    for stuff in l1:
+        for other in l2:
+            if stuff == other:
+                l3.append(stuff)
+    return l3
+
+
+"""This function takes 2 lists and returns a list of shared elements between the two"""
+
+
+def partition(lst, fn):
+    lst1 = []
+    lst2 = []
+
+    def is_even(num):
+        return num % 2 == 0
+
+    def is_string(el):
+        return isinstance(el, str)
+
+    if fn == 'is_even':
+        for nums in lst:
+            if is_even(nums) == True:
+                lst1.append(nums)
+            elif is_even(nums) == False:
+                lst2.append(nums)
+    elif fn == 'is_string':
+        for elements in lst:
+            if is_string(elements) == True:
+                lst1.append(elements)
+            elif is_string(elements) == False:
+                lst2.append(elements)
+    return [lst1, lst2]
+
+
+# def partition_solution(lst, fn):
+#     true_list = []
+#     false_list = []
+
+#     for val in lst:
+#         if fn(val):
+#             true_list.append(val)
+#         else:
+#             false_list.append(val)
+
+#     return [true_list, false_list]
+
+
+# def is_string(el):
+#     return isinstance(el, str)
+
+
+# def is_even(num):
+#     return num % 2 == 0
+"""This function takes a list and a callback and returns 2 lists, 1 that has elements that came out true and the other false"""
+
+
+def mode(nums):
+    frequent = 0
+
+    for num in nums:
+        if frequent < nums.count(num):
+            frequent = nums.count(num)
+    return num
+
+
+"""This function takes a list of numbers and returns the most common number in that list"""
+
+
+def calculate(operation, a, b, make_int=False, message='The result is'):
+    add = a + b
+    mult = a * b
+    sub = a - b
+    div = a / b
+    endnum = 0
+
+    if make_int == True:
+        if operation == 'add':
+            endnum = add
+            return f'{message} {int(endnum)}'
+        elif operation == 'subtract':
+            endnum = sub
+            return f'{message} {int(endnum)}'
+        elif operation == 'divide':
+            endnum = div
+            return f'{message} {int(endnum)}'
+        elif operation == 'multiply':
+            endnum = mult
+            return f'{message} {int(endnum)}'
+        else:
+            return None
+
+    elif make_int == False:
+        if operation == 'add':
+            endnum = add
+            return f'{message} {endnum}'
+        elif operation == 'subtract':
+            endnum = sub
+            return f'{message} {endnum}'
+        elif operation == 'divide':
+            endnum = div
+            return f'{message} {endnum}'
+        elif operation == 'multiply':
+            endnum = mult
+            return f'{message} {endnum}'
+        else:
+            return None
+
+
+"""This function takes an operation and 2 numbers and returns the final solution along with a message"""
