@@ -90,6 +90,57 @@ def list_manipulation(lst, command, location, value=None):
 
 
 def is_palindrome(phrase):
-    sent = phrase.lower()
+    sent = phrase.lower()[::-1].replace(' ', '')
 
-    return phrase
+    return phrase.lower().replace(' ', '') == sent
+
+
+"""This function takes a string and returns true or false if it can be read normally and backwards"""
+
+
+def frequency(lst, search_term):
+
+    return lst.count(search_term)
+
+
+"""This function takes a list and a term to search for in the list and returns how many times that term shows up in the list"""
+
+
+def flip_case(phrase, to_swap):
+    newstr = ""
+
+    for letter in phrase:
+        if letter.lower() == to_swap:
+            letter = letter.swapcase()
+        newstr += letter
+
+    return newstr
+
+
+"""This function takes a string and flips casing in the string that matches the letter entered"""
+
+
+def multiply_even_numbers(nums):
+    mult = 1
+    for num in nums:
+        if num % 2 == 0:
+            mult *= num
+    return mult
+
+
+"""This function takes in a list of nums and only multiplies the evens together and returns the product"""
+
+
+def capitalize(phrase):
+    return phrase.capitalize()
+
+
+"""This function takes in a string and returns it with the very first letter capitalized"""
+
+
+def compact(lst):
+    newlst = []
+    for stuff in lst:
+        if bool(stuff) == True:
+            newlst.append(stuff)
+    return newlst
