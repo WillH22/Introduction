@@ -13,7 +13,7 @@
 
     <div class="addTodo">
 <form action="" id="todoForm">
-    <input type="text" name="ToDo" placeholder="Add on Todo list" id="textBox">
+    <input type="text" name="ToDo" placeholder="Add on Todo list" id="textBox" autocomplete="off">
    <input type="submit" id="btn">
 </form>
     </div>
@@ -22,9 +22,12 @@
         <section id="results">
             <p id="todoooo">To do</p>
             <ul class="Bulleted">
-                <button id="purge">Purge</button>
-                <button id="crossout">Crossout all</button>
+                <!-- <button id="purge">Purge</button>
+                <button id="crossout">Crossout all</button> -->
             </ul>
+            <button id="purge">Purge</button>
+                <button id="crossout">Crossout all</button>
+            <button id='uncross'>Uncrossout</button>
         </section>
     </div>
 

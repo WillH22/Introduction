@@ -87,7 +87,7 @@ text-decoration: line-through;
     display: block;
     position: absolute;
     right: 700px;
-    top: 475px;
+    top: 600px;
 }
 
 #purge:hover{
@@ -102,10 +102,24 @@ text-decoration: line-through;
     padding: 10px 20px;
     display: block;
     position: absolute;
-    top: 675px;
+    top: 775px;
     left: 185px;
 }
 
 #crossout:hover{
+    cursor: pointer;
+}
+
+#uncross{
+    border-radius: 5px;
+    font-size: 18px;
+    padding: 5px 10px;
+    display: block;
+    position: absolute;
+    top: 835px;
+    left: 205px;
+}
+
+#uncross:hover{
     cursor: pointer;
 }
