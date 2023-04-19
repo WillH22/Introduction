@@ -6,6 +6,7 @@ const doubleColor = [...COLORS, ...COLORS];
 //game state stuff
 let waitingMove = false;
 let firstPick = null;
+let shown = 0;
 
 // here is a helper function to shuffle an array
 // it returns the same array with values shuffled
@@ -56,22 +57,33 @@ function handleCardClick(event) {
   // you can use event.target to see which element was clicked
   console.log("you just clicked", event.target);
 
+  const divs = document.querySelectorAll("div");
+
   if (waitingMove) {
     return;
   }
   event.target.style.backgroundColor = event.target.classList;
 
   if (!firstPick) {
-    firstPick = event;
+    firstPick = event.target;
 
     return;
+  }
+
+  const matchColor = firstPick.classList;
+
+  console.log(`You clicked on matchColor ${matchColor}`);
+
+  if (matchColor === event.target.classList) {
+    waitingMove = false;
+    firstPick = null;
   }
 
   waitingMove = true;
 
   setTimeout(() => {
-    event.style.backgroundColor = ;
-    firstPick.style.backgroundColor = ;
+    event.target.style.backgroundColor = null;
+    firstPick.style.backgroundColor = null;
 
     waitingMove = false;
     firstPick = null;
