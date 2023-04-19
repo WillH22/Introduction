@@ -67,7 +67,7 @@ form.addEventListener("submit", function (e) {
     todoArray = [];
   } else {
     todoArray = JSON.parse(todo);
-    console.log(todoArray);
+    // console.log(todoArray);
   }
   todoArray.push(todoInput.value);
   localStorage.setItem("todo", JSON.stringify(todoArray));
