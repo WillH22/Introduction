@@ -40,7 +40,7 @@ class Garage {
     if (!(newcar instanceof Vehicle)) {
       return "Only vehicles are allowed in here!";
     }
-    if (this.vehicles >= this.cap) {
+    if (this.vehicles.length >= this.cap) {
       return "Sorry we're full.";
     }
     this.vehicles.push(newcar);
