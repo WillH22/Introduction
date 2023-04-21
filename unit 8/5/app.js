@@ -6,7 +6,6 @@ const doubleColor = [...COLORS, ...COLORS];
 //game state stuff
 let waitingMove = false;
 let firstPick = null;
-let secondpick = null;
 let shown = 0;
 
 // here is a helper function to shuffle an array
@@ -56,21 +55,28 @@ function createDivsForColors(colorArray) {
 // TODO: Implement this function!
 function handleCardClick(event) {
   // you can use event.target to see which element was clicked
-  console.log("you just clicked", event.target);
+  // console.log(`you just clicked`, event.target);
 
-  if (waitingMove) {
+  if (
+    waitingMove ||
+    event.target.classList.contains("Flipped") ||
+    event.target === firstPick
+  ) {
     return;
   }
   event.target.style.backgroundColor = event.target.classList;
 
   if (!firstPick) {
     firstPick = event.target;
-
     return;
   }
-  const matchColor = firstPick.classList;
 
-  if (matchColor === event.target.classList) {
+  const matchColor = firstPick.classList.toString();
+
+  if (matchColor === event.target.classList.toString()) {
+    firstPick.classList.add("Flipped");
+    event.target.classList.add("Flipped");
+
     waitingMove = false;
     firstPick = null;
     shown += 2;
