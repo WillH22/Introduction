@@ -1,24 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+  <title>Meme Generator</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
 </head>
-<header>
-    <a href="../index.html">Home</a>
-</header>
-
-<hr>
-
 <body>
-<div class="memeGen">
-    
-</div>
-
+  <div class="container">
+    <h1>Meme Generator</h1>
+    <form id="meme-form">
+      <label for="image">Image Link:</label>
+      <input type="text" id="image" name="image" autocomplete='off' required>
+      
+      <label for="top-text">Top Text:</label>
+      <input type="text" id="top-text" name="top-text" autocomplete='off' required>
+      
+      <label for="bottom-text">Bottom Text:</label>
+      <input type="text" id="bottom-text" name="bottom-text" autocomplete='off' required>
+      
+      <button type="submit">Generate Meme</button>
+    </form>
+    <div id="meme-container">
+    </div>
+  </div>
+  
+  <script src="app.js"></script>
 </body>
-
 </html>
