@@ -28,7 +28,7 @@ function makeHtmlBoard() {
   // TODO: get "htmlBoard" variable from the item in HTML w/ID of "board"
   const htmlBoard = document.querySelector("#board");
 
-  // TODO: add comment for this code
+  // add a top clickable row so pieces can be placed
   const top = document.createElement("tr");
   top.setAttribute("id", "column-top");
   top.addEventListener("click", handleClick);
@@ -40,7 +40,7 @@ function makeHtmlBoard() {
   }
   htmlBoard.append(top);
 
-  // TODO: add comment for this code
+  // creates the rest of the board
   for (let y = 0; y < HEIGHT; y++) {
     const row = document.createElement("tr");
     for (let x = 0; x < WIDTH; x++) {
