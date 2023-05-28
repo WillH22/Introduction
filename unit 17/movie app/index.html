@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>movie app</title>
+</head>
+<body>
+    
+    <div class="container">
+        <h1>Movie App</h1>
+        <form action="" id="movieRating">
+            <label for="movie-name">Movie Name</label>
+            <input type="text" autocomplete="off" id="movieTitle">
+
+            <label for="Rating" id="rating">Rating</label>
+            <input type="range" name="rating-range" id="rate-range" max="10" min="0" value="0" oninput="this.nextElementSibling.value = this.value">
+            <output>0</output>
+
+            <button id="submit">Submit</button>
+        </form>
+        <div id="moviecontainer">
+
+        </div>
+    </div>
+    
+
+
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+
+    <script>
+        const form = $(document.getElementById("movieRating"));
+$(form.addEventListener("submit", function (event) {
+  event.preventDefault();
+  const rating = $(document.getElementById('rate-range'));
+  const title = $(document.getElementById('movieTitle'));
+
+  const movierated = $(document.createElement('div'));
+  $(movierated.classList.add('rated'));
+
+  const movTitle = $(document.createElement('span'));
+  $(movTitle.classList.add('titles'));
+  $(movTitle.innerText = title.value);
+
+  const ratings = $(document.createElement('span'));
+  $(ratings.classList.add('rates'));
+  $(ratings.innerText = rating.value);
+
+  const removeButton = $(document.createElement('button'));
+  $(removeButton.classList.add('remove-button'));
+  $(removeButton.innerText = 'Remove');
+
+  $(movierated.appendChild(title));
+  $(movierated.appendChild(rating));
+  $(movierated.appendChild(removeButton));
+
+  const container = $(document.getElementById('moviecontainer'));
+  $(container.appendChild(movierated));
+
+  $(title.value = '');
+  $(rating.value = '');
+}))
+const container = $(document.getElementById("moviecontainer"));
+$(container.addEventListener("click", function (event) {
+  if (event.target.classList.contains("remove-button")) {
+    event.target.parentElement.remove();
+  }
+}));
+
+    </script>
+</body>
+</html>

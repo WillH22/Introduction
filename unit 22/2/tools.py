@@ -261,3 +261,228 @@ def calculate(operation, a, b, make_int=False, message='The result is'):
 
 
 """This function takes an operation and 2 numbers and returns the final solution along with a message"""
+
+elmo = ('Elmo', 5, ['hugging', 'being nice'])
+sauron = ('Sauron', 5000, ['killing hobbits', 'chess'])
+gandalf = ('Gandalf', 10000, ['waving wands', 'chess'])
+
+
+def friend_date(a, b):
+    for stuff in a[-1]:
+        for other in b[-1]:
+            if stuff == other:
+                return True
+
+    else:
+        return False
+
+
+"""This function takes 2 tuples with a list of hobbies and returns true if they have 1 in common"""
+
+
+def triple_and_filter(nums):
+    newnums = []
+    zeron = 0
+    for num in nums:
+        if num % 4 == 0:
+            zeron = num * 3
+            newnums.append(zeron)
+    return newnums
+
+
+"""This function takes in a list of numbers and takes the numbers that are divisible by 4 and multiplies them by 3 and returns the new numbers"""
+
+
+names = [
+    {'first': 'Ada', 'last': 'Lovelace'},
+    {'first': 'Grace', 'last': 'Hopper'},
+]
+
+
+def extract_full_names(people):
+    peopleslist = []
+    for person in people:
+        peopleslist.append(f"{person['first']} {person['last']}")
+    return peopleslist
+
+
+"""This function takes a list of people's names and returns their first and last names"""
+
+
+def sum_floats(nums):
+    zeron = 0
+
+    for num in nums:
+        if isinstance(num, float):
+            zeron += num
+    return zeron
+
+
+"""This functions takes a list and checks if any are floats then adds them and returns the sum"""
+
+
+def list_check(lst):
+    for stuff in lst:
+        if bool(isinstance(stuff, list)) == False:
+            return False
+    else:
+        return True
+
+
+"""This checks if the list only contains lists"""
+
+lst = [1, 2, 3, 4, 5]
+
+
+def remove_every_other(lst):
+    num = 0
+    newlst = []
+    while num <= len(lst):
+        newlst.append(lst[num])
+        num += 2
+    return newlst
+
+
+"""This takes in a list and returns a list with every other item from the original list"""
+
+
+def sum_pairs(nums, goal):
+    empty = ()
+    for num in nums:
+        for digits in nums:
+            if num + digits == goal:
+                empty = (num, digits)
+    return empty
+
+
+"""This function takes in a list of numbers and returns a pair that sums up to the goal"""
+
+
+def vowel_count(phrase):
+    count = {}
+    vowels = 'aeiou'
+    for letter in phrase.lower():
+        for vowel in vowels:
+            if letter == vowel:
+                if letter not in count:
+                    count[letter] = 0
+                count[letter] += 1
+    return count
+
+
+"""This function takes in a string and returns a dictionary of vowels"""
+
+
+def titleize(phrase):
+    lower = phrase.lower()
+    return lower.title()
+
+
+"""This function takes in a string and returns the string with the first letter of every word capitalized"""
+
+
+def find_factors(num):
+    x = range(1, num + 1)
+    lst = []
+
+    for nums in x:
+        if num % nums == 0:
+            lst.append(nums)
+    return lst
+
+
+"""Takes a number and returns all factors of that number"""
+
+
+# def includes(collection, sought, start=None):
+#     if isinstance(collection, dict):
+#         return sought in collection.values()
+
+#     if start is None or isinstance(collection, set):
+#         return sought in collection
+
+#     return sought in collection[start:]
+
+
+def includes(collection, sought, start=None):
+    if isinstance(collection, dict):
+        for items in collection.values():
+            if items == sought:
+                return True
+
+        return False
+
+    if isinstance(collection, set):
+        for something in collection:
+            if something == sought:
+                return True
+
+        return False
+
+    for everything in collection[start:]:
+        if everything == sought:
+            return True
+
+    return False
+
+
+"""This function takes a list/tuples/dictionaries/sets as a collection and searches for the sought item returning True or False if the item is in the collection"""
+
+
+def repeat(phrase, num):
+    if not isinstance(num, int) or 0 > num:
+        return None
+    return phrase * num
+
+
+"""This function takes a phrase and a number and returns the phrase repeated that number of times"""
+
+
+def truncate(phrase, n):
+    if n >= 3:
+        if len(phrase) >= n:
+            return f"{phrase[0:n - 3]}..."
+        elif len(phrase) < n:
+            return phrase
+    elif n < 3:
+        return 'truncation must be at least 3 characters'
+
+
+"""This function takes in a phrase and a number and returns a truncated at the number of characters version fo the phrase"""
+
+
+def two_list_dictionary(keys, values):
+    diction = {}
+
+    for x, y in enumerate(keys):
+        if x < len(values):
+            diction[y] = values[x]
+        else:
+            None
+    return diction
+
+
+"""This function takes in 2 lists, keys and values and returns a dictionary"""
+
+nums = [1, 2, 3, 4]
+
+
+def sum_range(nums, start=0, end=None):
+    zeron = 0
+
+    if end is not None and end > len(nums):
+        for num in nums[start:]:
+            zeron += num
+        return zeron
+    else:
+        for num in nums[start:end + 1]:
+            zeron += num
+        return zeron
+
+
+"""this takes in a list of numbers and adds them depending on where it starts and ends and returns the sum of those numbers"""
+
+
+def same_frequency(num1, num2):
+    for num in num1:
+        if num == num2[i]:
