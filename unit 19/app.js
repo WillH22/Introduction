@@ -157,7 +157,9 @@ async function setupAndStart() {
 /** On click of start / restart button, set up game. */
 $("#restart").on("click", setupAndStart);
 
-//code looks good.it's important to note that the code relies on external dependencies such as Axios and jQuery, so make sure to include those libraries in your project for the code to work correctly.
+clude those libraries in your project for the code to work correctly.
 
 /** On page load, add event handler for clicking clues */
 $(document).on("click", "#jeopardy td", handleClick);
+
+//code looks good.it's important to note that the code relies on external dependencies such as Axios and jQuery, so make sure to in
