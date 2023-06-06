@@ -8,24 +8,20 @@
     <title>movie app</title>
 </head>
 <body>
-    
-    <div class="container">
-        <h1>Movie App</h1>
-        <form action="" id="movieRating">
-            <label for="movie-name">Movie Name</label>
-            <input type="text" autocomplete="off" id="movieTitle">
-
-            <label for="Rating" id="rating">Rating</label>
-            <input type="range" name="rating-range" id="rate-range" max="10" min="0" value="0" oninput="this.nextElementSibling.value = this.value">
-            <output>0</output>
-
-            <button id="submit">Submit</button>
-        </form>
-        <div id="moviecontainer">
-
-        </div>
-    </div>
-    
+   <div class="container">
+  <form id="movieForm">
+    <label for="movieTitle">Movie Title:</label>
+    <input type="text" id="movieTitle" autocomplete="off"/>
+  
+    <label for="movieRating">Rating:</label>
+    <input type="text" id="movieRating" autocomplete="off"/>
+  
+    <button type="submit" id="submitButton">Submit</button>
+  </form>
+  
+  <div id="movieList">
+  </div>
+</div> 
 
 
 
@@ -37,43 +33,33 @@
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
 
     <script>
-        const form = $(document.getElementById("movieRating"));
-$(form.addEventListener("submit", function (event) {
-  event.preventDefault();
-  const rating = $(document.getElementById('rate-range'));
-  const title = $(document.getElementById('movieTitle'));
-
-  const movierated = $(document.createElement('div'));
-  $(movierated.classList.add('rated'));
-
-  const movTitle = $(document.createElement('span'));
-  $(movTitle.classList.add('titles'));
-  $(movTitle.innerText = title.value);
-
-  const ratings = $(document.createElement('span'));
-  $(ratings.classList.add('rates'));
-  $(ratings.innerText = rating.value);
-
-  const removeButton = $(document.createElement('button'));
-  $(removeButton.classList.add('remove-button'));
-  $(removeButton.innerText = 'Remove');
-
-  $(movierated.appendChild(title));
-  $(movierated.appendChild(rating));
-  $(movierated.appendChild(removeButton));
-
-  const container = $(document.getElementById('moviecontainer'));
-  $(container.appendChild(movierated));
-
-  $(title.value = '');
-  $(rating.value = '');
-}))
-const container = $(document.getElementById("moviecontainer"));
-$(container.addEventListener("click", function (event) {
-  if (event.target.classList.contains("remove-button")) {
-    event.target.parentElement.remove();
-  }
-}));
+    $(document).ready(function() {
+      $('#movieForm').submit(function(event) {
+        event.preventDefault(); 
+    
+        
+        var movieTitle = $('#movieTitle').val();
+        var movieRating = $('#movieRating').val();
+    
+        
+        var newMovie = $('<div>').text('Movie: ' + movieTitle + ', Rating: ' + movieRating);
+    
+        
+        var removeButton = $('<button>').text('Remove');
+        removeButton.addClass('removeButton'); 
+    
+        newMovie.append(removeButton);
+    
+        $('#movieList').append(newMovie);
+    
+        $('#movieTitle').val('');
+        $('#movieRating').val('');
+      });
+    
+      $(document).on('click', '.removeButton', function() {
+        $(this).parent().remove(); 
+      });
+    });
 
     </script>
 </body>

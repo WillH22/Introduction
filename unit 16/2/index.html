@@ -5,9 +5,21 @@
 </head>
 <body>
 
-<div class="game">
+  <h1>Connect Four</h1>
+  <div class="form">
+    <label for="player1">Player 1 Name:</label>
+    <input type="text" id="player1" required>
+    <label for="color1">Player 1 Color:</label>
+    <input type="color" id="color1" required>
+    <br>
+    <label for="player2">Player 2 Name:</label>
+    <input type="text" id="player2" required>
+    <label for="color2">Player 2 Color:</label>
+    <input type="color" id="color2" required>
+    <br>
+    <button id="start">Start Game</button>
+  </div>
   <table id="board"></table>
-</div>
 
 <script src="app.js"></script>
 
