@@ -347,12 +347,14 @@ def remove_every_other(lst):
 
 
 def sum_pairs(nums, goal):
-    empty = ()
-    for num in nums:
-        for digits in nums:
-            if num + digits == goal:
-                empty = (num, digits)
-    return empty
+    n = len(nums)
+
+    for i in range(n):
+        for j in range(i):
+            if nums[i] + nums[j] == goal:
+                return (nums[j], nums[i])
+
+    return ()
 
 
 """This function takes in a list of numbers and returns a pair that sums up to the goal"""
@@ -484,5 +486,110 @@ def sum_range(nums, start=0, end=None):
 
 
 def same_frequency(num1, num2):
-    for num in num1:
-        if num == num2[i]:
+    str_num1 = str(num1)
+    str_num2 = str(num2)
+    freq1 = {}
+    freq2 = {}
+
+    for digit in str_num1:
+        freq1[digit] = freq1.get(digit, 0) + 1
+
+    for digit in str_num2:
+        freq2[digit] = freq2.get(digit, 0) + 1
+
+    return freq1 == freq2
+
+
+"""This takes in 2 long numbers and see if they have the same amount and exact same numbers in the number"""
+
+
+def two_oldest_ages(ages):
+    oldest = None
+    second_oldest = None
+
+    for age in ages:
+        if oldest is None or age > oldest:
+            second_oldest = oldest
+            oldest = age
+        elif age != oldest and (second_oldest is None or age > second_oldest):
+            second_oldest = age
+
+    return (second_oldest, oldest)
+
+
+"""This takes a bunch of ages and returns 2 distinctive oldest ages"""
+
+
+def find_the_duplicate(nums):
+    num_count = {}
+
+    for num in nums:
+        if num in num_count:
+            return num
+        else:
+            num_count[num] = 1
+
+    return None
+
+
+"""This takes some numbers and returns the duplicate number"""
+
+
+m2 = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9],
+]
+
+m1 = [
+    [1,   2],
+    [30, 40],
+]
+
+
+def sum_up_diagonals(matrix):
+    n = len(matrix)
+    diagonal_sum = 0
+
+    for i in range(n):
+        for j in range(n):
+            if i == j:
+                diagonal_sum += matrix[i][j]
+            if i + j == n - 1:
+                diagonal_sum += matrix[i][j]
+
+    return diagonal_sum
+
+
+"""This takes in a matrix? of numbers and returns the sum of numbers that were diagonal"""
+
+
+def min_max_keys(d):
+    min_key = None
+    max_key = None
+
+    for key in d:
+        if min_key is None or key < min_key:
+            min_key = key
+        if max_key is None or key > max_key:
+            max_key = key
+
+    return min_key, max_key
+
+
+"""This takes a dictionary and returns the min key and max key"""
+
+
+def find_greater_numbers(nums):
+    count = 0
+    n = len(nums)
+
+    for i in range(n):
+        for j in range(i + 1, n):
+            if nums[i] < nums[j]:
+                count += 1
+
+    return count
+
+
+"""This takes a bunch of numbers and returns how many times a number was followed by a greater number"""
