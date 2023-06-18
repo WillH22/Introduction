@@ -37,8 +37,15 @@ It's a message sent by a server to a client in response to a request.
 
 
 What is an HTTP header? Give a couple examples of request and response headers you have seen.
+it's part of the HTTP protocol that consists of additional information sent along with an HTTP request/reponse.
 
+Some request headers include User-Agent and Accept-Language
+Some response headers include Content-Type and Cashe-Control
 
 
 
 What are the processes that happen when you type “http://somesite.com/some/page.html” into a browser?
+1. The browser turns it into an IP address
+2. The browser sends a request along with headers.
+3. The server sends an HTTP response back over the TCP connection
+4. The browser starts rendering the HTML content along with additional resources such as CSS files and images.
