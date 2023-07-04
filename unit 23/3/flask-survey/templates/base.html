@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+    <header>
+        <h1>Survey App</h1>
+    </header>
+
+    <div class="content">
+        {% block content %}
+        {% endblock %}
+        {% for msg in get_flashed_messages() %}
+        <p>{{ msg }}</p>
+        {% endfor %}
+    </div>
+
+</body>
+</html>
