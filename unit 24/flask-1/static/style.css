@@ -1,0 +1,22 @@
+body {
+    background-color: rgb(119, 119, 119);
+}
+
+.new {
+    position: relative;
+    top: 50px;
+    right: 278px;
+}
+
+.amount {
+    position: relative;
+    top: 100px;
+    right: 520px;
+}
+
+button {
+    position: relative;
+    top: 150px;
+    right: 650px;
+}
+

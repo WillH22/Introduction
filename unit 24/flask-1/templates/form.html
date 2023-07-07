@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block title %} Currency Converter {% endblock %}
+
+{% block content %}
+<h1>Currency Converter</h1>
+
+{% for msg in get_flashed_messages() %}
+<p> {{ msg }} </p>
+{% endfor %}
+
+<form action="/results">
+    <label for="convFrom" class="old">Converting from:</label>
+    <input type="text" autocomplete="false" class="old" name="convert_from">
+
+    <label for="convTo" class="new">Converting to:</label>
+    <input type="text" autocomplete="false" class="new" name="convert_to">
+
+    <label for="amount" class="amount">Amount:</label>
+    <input type="text" autocomplete="false" class="amount" name="amount">
+
+    <button>Convert</button>
+</form>
+
+{% endblock %}
