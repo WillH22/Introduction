@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block title %}Boggle game{% endblock %}
+{% block body %}
+<div class="header">
+    <h1>We Boggling</h1>
+</div>
+<div id="timer">Time: <span>60</span></div>
+<div id="total_score">Total score: <span>{{session['user_score']}}</span></div>
+<div id="total_games">Game # <span>{{session['game_count']}}</span></div>
+<section class="playground">
+    <table id="game">
+        <tbody>
+        {% for row in letters_board %}
+            <tr>
+            {% for letter in row %}
+                <td>{{letter}}</td> <!-- Display each letter in a table cell -->
+            {% endfor %}
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</section>
+<div id="score">Current score: <span>0</span></div>
+<div id="result">result: <span></div> <!-- Placeholder for displaying result -->
+<form id="checkForm">
+    <input id="checkWordField" type="text" name="word" placeholder="Word"> <!-- Input field for entering a word -->
+    <button id="btn" data-text="word" >Enter</button> <!-- Button to submit the word -->
+</form>
+
+{% endblock %}
