@@ -1,2 +1,2 @@
 # Introduction
-Welcome to my website! This is where my projects for springboard and portfolio will be!
+Welcome to my github! This is where my projects for springboard will be!
