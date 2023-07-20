@@ -1,5 +1,6 @@
 /** Customer for Lunchly */
 
+const { get } = require("../app");
 const db = require("../db");
 const Reservation = require("./reservation");
 
@@ -12,6 +13,7 @@ class Customer {
     this.lastName = lastName;
     this.phone = phone;
     this.notes = notes;
+    this.fullName = `${firstName} ${lastName}`;
   }
 
   /** find all customers. */
@@ -26,7 +28,7 @@ class Customer {
        FROM customers
        ORDER BY last_name, first_name`
     );
-    return results.rows.map(c => new Customer(c));
+    return results.rows.map((c) => new Customer(c));
   }
 
   /** get a customer by ID. */
