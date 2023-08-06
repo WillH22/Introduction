@@ -1,0 +1,33 @@
+.App {
+    text-align: center;
+  }
+  
+  .nav a {
+    display: inline-block;
+    font-size: 1.2em;
+    text-decoration: none;
+    margin: 30px;
+  }
+  
+  .nav a.active {
+    background-color: lightgray;
+  }
+  
+  .VendingMachine h1 {
+    font-size: 3em;
+  }
+  
+  .VendingMachine a {
+    display: block;
+    margin-top: 15px;
+    font-size: 1.2em;
+    text-decoration: none;
+  }
+  
+  .VendingMachine .home {
+    display: none;
+  }
+  
+  img {
+    width: 500px;
+  }

@@ -1,0 +1,21 @@
+{
+  "name": "4",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/cli": "^7.22.9",
+    "@babel/compat-data": "^7.22.9",
+    "@babel/preset-react": "^7.22.5"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.22.9",
+    "@babel/generator": "^7.22.9"
+  }
+}

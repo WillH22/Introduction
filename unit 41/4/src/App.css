@@ -1,0 +1,35 @@
+.black {
+    background-color: black;
+    color: white;
+    text-align: center;
+    width: 130px;
+    padding: 165px 165px;
+    border-radius: 50%;
+    }
+    
+    .red {
+    background-color: red;
+    color: white;
+    text-align: center;
+    width: 130px;
+    padding: 165px 165px;
+    border-radius: 50%;
+    }
+    
+    .goldenrod {
+    background-color: goldenrod;
+    color: white;
+    text-align: center;
+    width: 130px;
+    padding: 165px 165px;
+    border-radius: 50%;
+    }
+    
+    .green {
+    background-color: green;
+    color: white;
+    text-align: center;
+    width: 130px;
+    padding: 165px 165px;
+    border-radius: 50%;
+    }
