@@ -71,3 +71,12 @@ function App() {
 }
 
 export default App;
+
+
+      //NOTES
+//1. Loading State: You're setting isLoading to false in both the snacks and drinks useEffect hooks, which means the loading state will be set to false as soon as the first set of data is fetched. This might cause your loading message to disappear even if the other data is still being fetched. You can use separate loading states for snacks and drinks to ensure that the loading message remains until both sets of data are fetched
+//Then, in your if (isLoading) check, you can consider checking both snacksLoading and drinksLoading.
+//2.Code DRYness: You have a lot of repeated code for fetching snacks and drinks. Consider creating a single function for fetching data that you can reuse
+//3.Route Title for Drinks: In your /drinks route, you have the title set as "Snacks." It seems like this might be a copy-paste error. You might want to change it to "Drinks"
+//4.Route Order: In the order of your routes, the routes for individual snack and drink items come before the /snacks and /drinks routes. This could potentially cause conflicts when navigating. Consider reordering your routes so that the more specific routes come after the general ones.
+
