@@ -28,3 +28,7 @@ class MapboxApi {
 }
 
 export default MapboxApi;
+
+//Suggestions:
+
+    //1. Consider handling potential errors that might arise during the distance calculation, such as invalid or missing coordinates. You could use try-catch blocks to handle these scenarios and provide appropriate error messages or fallback values.
