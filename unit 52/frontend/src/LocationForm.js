@@ -196,3 +196,7 @@ function LocationForm({ location, updateLocation, isMobile }) {
 }
 
 export default LocationForm;
+
+//Suggestions:
+
+//  1.  Consider adding more specific error messages for different validation scenarios, which can provide more informative feedback to users.
