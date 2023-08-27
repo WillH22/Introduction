@@ -1,0 +1,28 @@
+.dropdown-menu-right {
+    right: 0;
+    left: auto;
+}
+
+.dropdown-menu-right button li a {
+    color: black;
+}
+
+.dropdown-menu-right button li a:hover {
+    color: darkgray;
+}
+
+a.inactive {
+    color: white !important;
+}
+
+a.active {
+    color: lightslategray !important;
+}
+
+a.inactive:hover {
+    color: lightslategray !important;
+}
+
+a.active:hover {
+    color: white !important;
+}
