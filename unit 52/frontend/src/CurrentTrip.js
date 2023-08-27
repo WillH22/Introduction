@@ -56,3 +56,8 @@ function CurrentTrip({
 }
 
 export default CurrentTrip;
+
+       //Suggestions:
+
+   //1. If currentTrip is used to maintain a list of locations along with their cumulative distances, you might want to provide a bit more context for each location. For example, you could display both the name and the distance for each point.
+   //2. Consider providing a confirmation prompt when the user clicks the "Delete Current Trip" button to prevent accidental deletions.
