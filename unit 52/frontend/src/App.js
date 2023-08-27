@@ -126,3 +126,11 @@ function App() {
 }
 
 export default App;
+
+
+//    Suggestions:
+
+   //1. Consider modularizing your code even further by creating more subcomponents. This can help improve maintainability, especially as your application grows.
+   //2. Ensure that you handle edge cases gracefully, such as when API calls fail or return unexpected data.
+   //3. Consider adding PropTypes or TypeScript typings to your components to improve code predictability and catch potential errors.
+   //4. Think about incorporating more styling options (like CSS modules or CSS-in-JS) for better encapsulation of styles.
