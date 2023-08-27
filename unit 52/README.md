@@ -14,6 +14,11 @@ Introducing **WeTrip**, a platform designed to assist boaters in planning their 
 
 **API Integration:** WeTrip harnesses the power of multiple APIs. Weather-related data originates from the _weatherbit.io API_, while _marinas.com API_ furnishes points of interest. For visualizing points of interest on maps and calculating distances, WeTrip integrates _React-mapbox-gl_ in tandem with _mapbox-gl-js_.
 
+**Tech Stack:**
+
+- **Frontend:** The frontend of WeTrip is built using **Create React App**, offering a modern and efficient framework for developing user interfaces.
+- **Backend:** The backend of WeTrip is powered by **Node.js**, providing a robust and scalable runtime environment for server-side applications.
+
 **Backend Database:** Moreover, a dedicated WeTrip-backend database houses all backend information. This database encompasses various tables, including:
 
 - **Users:** Housing user credentials, location, and preferred units of measurement.
