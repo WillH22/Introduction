@@ -35,3 +35,9 @@ function DeleteModal({ deleteTrip, username, id }) {
 }
 
 export default DeleteModal;
+
+//Suggestions:
+
+    //1.Consider adding a more descriptive title or header to the modal to indicate the purpose of the modal more explicitly.
+   //2. If possible, consider including more contextual information within the modal, such as the name or details of the trip being deleted, to ensure that users are aware of the action they're confirming.
+   //3. Since modals are typically used to capture user attention, you might want to ensure that the text within the modal is concise yet clear in conveying the purpose of the modal.
